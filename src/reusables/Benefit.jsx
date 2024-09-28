@@ -9,7 +9,7 @@ const Benefit = ({ image, pic, text }) => {
                 backgroundPosition: 'center',
             }}
         >
-          <div className="inner relative top-[9.7rem] left-[35%] w-16 h-16 md:w-24 md:h-24 rounded-[50%] bg-[#FFCA08] flex items-center justify-center">
+          <div className="inner relative top-[9.7rem] md:top-[14.35rem] left-[35%] w-16 h-16 md:w-24 md:h-24 rounded-[50%] bg-[#FFCA08] flex items-center justify-center">
             <img src={pic} alt="" className="w-10" />
           </div>
           

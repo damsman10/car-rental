@@ -1,4 +1,4 @@
-const SvgDesignTop = () => {
+const SvgDesignPricingT = () => {
     return (
       <div>
         <svg
@@ -8,7 +8,7 @@ const SvgDesignTop = () => {
           viewBox="0 0 1600 406"
         >
           <path
-            style={{ fill: '#e8e8e8' }}
+            style={{ fill: '#fff' }}
             d="M1608.03,417H-1.709L-3.493,267.327c76.974,52.083,173.369,106.4,262.948,114.816,82.7,7.772,175.138-15.857,175.138-15.857,296.27-61.5,450.55-323.851,772.167-357.194,146.02-12.5,299.07,11.613,401.05,33.813Z"
           />
           <path
@@ -24,5 +24,5 @@ const SvgDesignTop = () => {
     );
   };
   
-  export default SvgDesignTop;
+  export default SvgDesignPricingT;
   

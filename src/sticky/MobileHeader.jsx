@@ -19,7 +19,7 @@ const MobileHeader = () => {
   }, [navigate]);
 
   return (
-    <div className='relative z-20 md:hidden h-14 w-full bg-black flex justify-between items-center px-4 py-6'>
+    <div className='relative z-20 md:hidden h-[4.5rem] w-full bg-black flex justify-between items-center px-4 py-6'>
       <div className="left">
         <Link to={'/'}>
           <img src={carlogo} alt="car logo" className='w-28' />
@@ -28,17 +28,19 @@ const MobileHeader = () => {
 
       <div className="right flex justify-between items-center gap-3">
         {/* Cart Icon */}
-        <div className="cart bg-[#FFCA08] h-8 w-8 rounded-[50%] cursor-pointer">
+        <Link to={'/cart'}>
+        <div className="cart bg-[#FFCA08] h-9 w-9 rounded-[50%] cursor-pointer"> 
           <div className="relative left-4 top-[-0.5rem] innercircle bg-[#FFCA08] h-5 w-5 border-[1px] border-black rounded-[50%] flex justify-center items-center">
-            <p className='text-[0.7rem]'>2</p>
+            <p className='text-[0.7rem] text-black'>0</p>
           </div>
           <img src={carticon} alt="" className='w-4 m-auto mt-[-0.65rem]' />
         </div>
+        </Link>
 
         {/* Hamburger Menu */}
         <div
-          className="hamburger bg-[#FFCA08] h-8 w-8 rounded-[50%] flex justify-center items-center cursor-pointer"
-          onClick={toggleMenu} // Toggle menu on click
+          className="hamburger bg-[#FFCA08] h-9 w-9 rounded-[50%] flex justify-center items-center cursor-pointer"
+          onClick={toggleMenu} 
         >
           <img src={hamburger} alt="hamburger icon" className='w-4' />
         </div>
@@ -68,7 +70,7 @@ const MobileHeader = () => {
         </NavLink>
         
         <NavLink
-          to="/rent"
+          to="/shop"
           className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >

@@ -6,7 +6,7 @@ const Header = () => {
   return (
   
     <div className="sticky p-4 hidden top-8 w-4/5 m-auto lg:flex justify-between items-center text-white rounded-[6rem] bg-[#000] z-20">
-      <Link to={'/'}><img src={carlogo} alt="car logo" /></Link>
+      <Link to={'/'}><img src={carlogo} alt="car logo" className='w-[8rem]' /></Link>
 
       <div className="nav">
         <ul className="flex justify-between items-center gap-10 italic font-bold">
@@ -83,7 +83,7 @@ const Header = () => {
         </ul>
       </div>
 
-      <Button text="Request a Car" />
+      <Button text="Request a Car" size="1rem" />
     </div>
   );
 };

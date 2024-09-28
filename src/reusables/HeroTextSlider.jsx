@@ -16,7 +16,7 @@ const HeroTextSlider = () => {
   };
 
   return (
-    <div className="relative hidden md:block top-4 md:top-[15rem] pt-[2rem] md:pt-[4rem] w-[85%] h-[20rem] m-auto z-0">
+    <div className="relative hidden md:block top-4 md:top-[10rem] pt-[2rem] md:pt-[4rem] w-[85%] h-[20rem] m-auto z-0">
       <style>
         {`
           /* Force all dots to be white */
