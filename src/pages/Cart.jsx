@@ -4,6 +4,8 @@ import car2 from "../assets/car-2.png"
 import car3 from "../assets/car-3.png"
 import car4 from "../assets/car-4.png"
 import { useState } from "react"
+import { useNavigate, Link } from "react-router-dom";
+
 
 const Cart = () => {
     const [count, setCount] =useState(0)
@@ -15,34 +17,52 @@ const Cart = () => {
     const decreament = () => {
       setCount(count - 1)
     }
-  
+    //changes made
+    const navigate = useNavigate();
+
+    const handleCheckoutClick = () => {
+      navigate('/checkout');
+    };
 
   return (
     <div>
         <PagesHero />
         <div id="shopping-cart" className=" mb-20 ">
-      <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
+        <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
         <li className=" flex items-center gap-2">
-         <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">1</span> Shopping Cart
-        </li> 
-        <i class="ri-arrow-right-line opacity-25"></i>
-        <li className=" flex items-center gap-2 opacity-25">
-          <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">2</span> Checkout Details
-        </li>
-        <i class="ri-arrow-right-line opacity-25"></i>
-        <li className=" flex items-center gap-2 opacity-25">
-          <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">3</span>Order Complete
-        </li>
-      </ul>
+            <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">
+              1
+            </span>{" "}
+            Shopping Cart
+          </li>
+          <i className="ri-arrow-right-line opacity-25"></i>
+          <Link to="/checkout">
+          
+          <li className=" flex items-center gap-2 opacity-25 hover:text-[#FFCA08]">
+            <span className="bg-yellow-400 text-sm  px-2 py-1 rounded-full">
+              2
+            </span>{" "}
+            Checkout Details
+          </li>
+          </Link>
+          <i className="ri-arrow-right-line opacity-25"></i>
+          <Link to="/orderComplete">
+          
+          <li className=" flex items-center gap-2 opacity-25">
+            <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">
+              3
+            </span>
+            Order Complete
+          </li>
+          </Link>
+        </ul>
       </div>
-      <div>
-       
-      </div>
+      <div></div>
         <div id="whole-table"  className=" flex flex-col items-center mb-20 justify-center">
         <table id="small-screen-tb" className="border-2 w-11/12 divide-y border-seperate lg:hidden md:hidden  divide-gray-200 border-gray-300 text-left">
           <tr>
             <th id="img" className="py-5 pl-5"><img className="h-20 w-24 rounded-xl " src={car1} alt="" /></th>
-            <td className="float-end"><i class="ri-close-large-fill text-red-600 text-xl"></i></td>
+            <td className="float-end"><i className="ri-close-large-fill text-red-600 text-xl"></i></td>
           </tr>
           <tr>
           <th className="px-4 py-5">Product</th>
@@ -77,7 +97,7 @@ const Cart = () => {
             </tr>
             </thead>
             <tr className="large-scrn">
-              <td className="border pl-5"><i class="ri-close-large-fill text-red-600 text-xl"></i></td>
+              <td className="border pl-5"><i className="ri-close-large-fill text-red-600 text-xl"></i></td>
               <td id="img" className="border py-5 pl-5"><img className="h-20 w-24 rounded-xl " src={car1} alt="" /></td>
               <td className="border font-bold pl-5"><h3 className="product-name">Car2<br/><span  className="font-normal">sku:skuy</span></h3></td>
               <td className="border text-lg pl-5"><h4>$500</h4></td>
@@ -133,7 +153,7 @@ const Cart = () => {
             <td id="subtotal" className="font-bold p-4 text-lg">%5076</td>
             </tr>
           </table>
-          <button className="border-2 px-10 bg-amber-400 mr-14 self-end w-5/6 mb-8 md:w-64  float-right py-3 hover:border-yellow-500  hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
+          <button onClick={handleCheckoutClick} className="border-2 px-10 bg-amber-400 mr-14 self-end w-5/6 mb-8 md:w-64  float-right py-3 hover:border-yellow-500  hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
                   Proceed to Checkout
                 </button>
           </div>

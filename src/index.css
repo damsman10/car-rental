@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -13,8 +13,9 @@ a {
   font-weight: 500;
   color: #f8f2f2;
   text-decoration: inherit;
-
 } */
+
+
  *{
   box-sizing: border-box;
   padding: 0;
