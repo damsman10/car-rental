@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -13,4 +13,110 @@ a {
   font-weight: 500;
   color: #f8f2f2;
   text-decoration: inherit;
+} */
+
+
+ *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ }
+ @media (max-width:480px) {
+  #shopping-cart{
+    display: none;
+  }
+  #whole-table{
+    margin-top: 30px;
+  }
+ thead{
+   display: none;
+ }
+ .large-scrn{
+  display: none;
+ }
+ #imd{
+  border: none;
+ }
+ th, td {
+  text-align: left; /* Align text to the left */
+ }
+ .coupon td{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+.cart-total{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+button{
+  margin-right: 0;
+  align-self: center;
+}
+}
+#shopping{
+  width: 100%;
+}
+#cart-totals{
+  width: 100%;
+  align-self: center;
+  margin: 0;
+}
+#whole-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+tfoot td{
+  padding: 0;
+  border-top: none;
+}
+#cart-img{
+  height: 160px;
+}
+ }
+ @media screen and (min-width:480.01px)and (max-width:800px) {
+  
+  thead{
+    display: none;
+  }
+  #table tr{
+    display: flex;
+    flex-direction: column;
+  }
+  #img{
+    display: none;
+  }
+  td{
+    padding: 15px 5px;
+  }
+  .product-name{
+    float: right;
+    text-align: right;
+  }
+  td h4{
+    float: right;
+  }
+  .coupon{
+    display:flex;
+  }
+  #apply{
+    width: 50%;
+  }
+  #shopping{
+    width: 100%;
+  }
+  #subtotal{
+    float: right;
+  }
+  #cart-totals{
+    width: 95%;
+  }
+  #small-screen-tb{
+    display: none;
+  }
+ }
+
+

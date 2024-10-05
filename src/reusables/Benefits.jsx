@@ -10,7 +10,7 @@ import p4 from "../assets/p-4.png";
 
 const Benefits = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-9 p-4">
+    <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-2 md:gap-9 p-4">
       <Benefit image={b1} pic={p1} text="No Extra Hidden Fees" />
       <Benefit image={b2} pic={p2} text="Multilingual Service" />
       <Benefit image={b3} pic={p3} text="24/7 Customer Support" />

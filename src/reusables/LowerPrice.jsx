@@ -1,30 +1,37 @@
-import SvgDesignTop from "./SvgDesignTop"
+import SvgDesignPricingT from "./SvgDesignPricingT"
+import SvgDesignPricingB from "./SvgDesignPricingB"
 import pricescar from '../assets/prices-car.png'
-import Service from "./Service"
-import pricesimg from '../assets/prices-img.png'
+import pricescarb from '../assets/car-pricing-bottom.png'
+import PricePlan from "./PricePlan"
+import ServicePricing from "./ServicePricing"
+import PricePlanSmall from "./PricePlanSmall"
 
 const LowerPrice = () => {
   return (
-    <div className="mt-[10rem]">
-        <div className="pricescar absolute w-[40rem] mt-[6rem]">
+    <div className="mt-[5rem]">
+        <div className="pricescar absolute w-[85%] md:w-[40%] mt-[6%]">
             <img src={pricescar} alt="" />
         </div>
-        <SvgDesignTop />
-        <div className="content px-[12%] w-full pt-[12rem] bg-[#1C1601] flex items-center justify-center gap-8">
-            <div className="left w-3/6 border-2 border-white flex">
-                <Service 
-                title = "Why are our prices lower?"
+        <SvgDesignPricingT />
+        
+        <div className="content px-[8%] w-full py-[8rem] bg-[#1C1601] flex flex-col lg:flex-row justify-between">
+            <div className="left w-[100%] md:w-3/6">
+                <ServicePricing
                 titlebg = "#221B01"
                 titlecolor = "#cecece"
-                service = "Find the perfect <br /> rental car for"
-                span = "your trip"
-                color = "white"
+                title = "Why are our prices lower?"
                 />
             </div>
 
-            <div className="right w-4/6 border-2 border-white">
-                <img src={pricesimg} alt="" width={""} />
+            <div className="price-plan space-y-8 flex flex-col md:flex-row items-center md:items-start lg:justify-center mt-28 md:mt-2">
+                <PricePlan />
+                <PricePlanSmall />
             </div>
+        </div>
+
+        <SvgDesignPricingB />
+        <div className="car-pri-b absolute w-[80%] md:w-[40%] -mt-[30%] ml-[20%] md:ml-[58%]">
+            <img src={pricescarb} alt="" />
         </div>
     </div>
   )
