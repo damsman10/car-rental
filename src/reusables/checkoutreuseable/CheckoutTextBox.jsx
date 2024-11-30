@@ -16,7 +16,7 @@ const CheckoutTextBox = ({ type, text, paragraph }) => {
       <div>
         {" "}
         {type === "link" && (
-          <p className="bg-[#f4f4f4] text-center sm:text-left font-bold px-[3.2rem] sm:ml-[1.5rem] pt-[3rem] text-[1rem]  pb-[2rem] sm:py-[2rem] sm:text-[1.1rem] ">
+          <p className="bg-[#272222] text-center sm:text-left font-bold px-[3.2rem] sm:ml-[1.5rem] pt-[3rem] text-[1rem]  pb-[2rem] sm:py-[2rem] sm:text-[1.1rem] ">
             {paragraph}{" "}
             <a
               href="#"

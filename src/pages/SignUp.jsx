@@ -114,7 +114,7 @@ const Signup = () => {
               <small className=" flex justify-between gap-1 ">
                 <p className="text">
                   Already have a Car Rental account?{" "}
-                  <a href="/checkout" className="text-sm text-yellow-600">
+                  <a href="/" className="text-sm text-yellow-600">
                     Log in!
                   </a>{" "}
                 </p>
